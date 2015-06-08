@@ -123,7 +123,6 @@
 #define CONFIG_SYS_L2CACHE_OFF		1
 #define CONFIG_INITRD_TAG		1
 #define CONFIG_SYS_GENERIC_BOARD
-#define CONFIG_OF_LIBFDT		1
 
 /* Size of malloc() pool */
 #define CONFIG_SYS_MALLOC_LEN		(CONFIG_ENV_SIZE + 128 * 1024)
@@ -152,6 +151,7 @@
 #define CONFIG_SYS_SERIAL0		V2M_UART0
 #define CONFIG_SYS_SERIAL1		V2M_UART1
 
+#include <config_distro_defaults.h>
 /* Command line configuration */
 #define CONFIG_CMD_DHCP
 #define CONFIG_CMD_PXE
@@ -163,7 +163,6 @@
 #define CONFIG_SUPPORT_RAW_INITRD
 
 #define CONFIG_CMD_FAT
-#define CONFIG_DOS_PARTITION		1
 #define CONFIG_MMC			1
 #define CONFIG_CMD_MMC
 #define CONFIG_GENERIC_MMC
@@ -201,17 +200,28 @@
 					 GENERATED_GBL_DATA_SIZE)
 #define CONFIG_SYS_INIT_SP_ADDR		CONFIG_SYS_GBL_DATA_OFFSET
 
+#define BOOT_TARGET_DEVICES(func) \
+	func(MMC, mmc, 0)
+#include <config_distro_bootcmd.h>
+
 /* Basic environment settings */
-#define CONFIG_BOOTCOMMAND		"run bootflash;"
 #ifdef CONFIG_VEXPRESS_ORIGINAL_MEMORY_MAP
+/*
+ * RAM starts at 0x6000_0000
+ *  - U-Boot loaded @ 8M
+ *  - Kernel loaded @ 32M
+ *  - Initrd loaded @ 128M
+ *  - DTB    loaded @ 240M
+ */
 #define CONFIG_PLATFORM_ENV_SETTINGS \
-		"loadaddr=0x80008000\0" \
-		"ramdisk_addr_r=0x61000000\0" \
-		"kernel_addr=0x44100000\0" \
-		"ramdisk_addr=0x44800000\0" \
-		"maxramdisk=0x1800000\0" \
-		"pxefile_addr_r=0x88000000\0" \
-		"kernel_addr_r=0x80008000\0"
+		"fdtfile=vexpress-v2p-ca9.dtb\0" \
+		"kernel_addr_r=0x62000000\0" \
+		"ramdisk_addr_r=0x68000000\0" \
+		"maxramdisk=0x06000000\0" \
+		"fdt_addr_r=0x6f000000\0" \
+		"loadaddr=0x70000000\0" \
+		"pxefile_addr_r=0x71000000\0" \
+		"scriptaddr=0x72000000\0"
 #elif defined(CONFIG_VEXPRESS_EXTENDED_MEMORY_MAP)
 #define CONFIG_PLATFORM_ENV_SETTINGS \
 		"loadaddr=0xa0008000\0" \
@@ -234,7 +244,8 @@
 			"devtmpfs.mount=0  vmalloc=256M\0" \
 		"bootflash=run flashargs; " \
 			"cp ${ramdisk_addr} ${ramdisk_addr_r} ${maxramdisk}; " \
-			"bootm ${kernel_addr} ${ramdisk_addr_r}\0"
+			"bootm ${kernel_addr} ${ramdisk_addr_r}\0" \
+                BOOTENV
 
 /* FLASH and environment organization */
 #define PHYS_FLASH_SIZE			0x04000000	/* 64MB */
@@ -287,7 +298,6 @@
 
 #define CONFIG_SYS_BARGSIZE		CONFIG_SYS_CBSIZE /* Boot args buffer */
 #define CONFIG_SYS_LONGHELP
-#define CONFIG_CMDLINE_EDITING		1
 #define CONFIG_SYS_MAXARGS		16	/* max command args */
 
 #endif /* VEXPRESS_COMMON_H */

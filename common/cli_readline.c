@@ -517,6 +517,7 @@ int cli_readline_into_buffer(const char *const prompt, char *buffer,
 	int	plen = 0;			/* prompt length	*/
 	int	col;				/* output column cnt	*/
 	char	c;
+	int first = 1;
 
 	/* print prompt */
 	if (prompt) {
@@ -528,7 +529,16 @@ int cli_readline_into_buffer(const char *const prompt, char *buffer,
 	for (;;) {
 		if (bootretry_tstc_timeout())
 			return -2;	/* timed out */
-		WATCHDOG_RESET();	/* Trigger watchdog, if needed */
+		if (first && timeout) {
+			uint64_t etime = endtick(timeout);
+
+			while (!tstc()) {	/* while no incoming data */
+				if (get_ticks() >= etime)
+					return -2;	/* timed out */
+				WATCHDOG_RESET();
+			}
+			first = 0;
+		}
 
 #ifdef CONFIG_SHOW_ACTIVITY
 		while (!tstc()) {
