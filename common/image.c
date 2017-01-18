@@ -1229,7 +1229,7 @@ int boot_ramdisk_high(struct lmb *lmb, ulong rd_data, ulong rd_len,
 		 * turning the "load high" feature off. This is intentional.
 		 */
 		initrd_high = simple_strtoul(s, NULL, 16);
-		if (initrd_high == ~0)
+		if (initrd_high == ~0 || !strcmp(s, "no_reloc"))
 			initrd_copy_to_ram = 0;
 	} else {
 		initrd_high = getenv_bootm_mapsize() + getenv_bootm_low();

@@ -4940,12 +4940,14 @@ List of environment variables (most likely not complete):
 		  of the 704 MB low memory, so that Linux kernel can
 		  access it during the boot procedure.
 
-		  If this is set to the special value 0xFFFFFFFF then
-		  the fdt will not be copied at all on boot.  For this
-		  to work it must reside in writable memory, have
-		  sufficient padding on the end of it for u-boot to
-		  add the information it needs into it, and the memory
-		  must be accessible by the kernel.
+		  If this is set to "no_reloc" or to the largest
+		  possible address (0xFFFFFFFF on 32-bit platforms,
+		  0xFFFFFFFFFFFFFFFF on 64-bit platforms), the fdt
+		  will not be copied at all on boot.  For this to work
+		  it must reside in writable memory, have sufficient
+		  padding on the end of it for u-boot to add the
+		  information it needs into it, and the memory must
+		  be accessible by the kernel.
 
   fdtcontroladdr- if set this is the address of the control flattened
 		  device tree used by U-Boot when CONFIG_OF_CONTROL is
@@ -4978,7 +4980,9 @@ List of environment variables (most likely not complete):
 
 		  setenv initrd_high 00c00000
 
-		  If you set initrd_high to 0xFFFFFFFF, this is an
+		  If you set initrd_high to "no_reloc" or to the largest
+		  possible address (0xFFFFFFFF on 32-bit platforms,
+		  0xFFFFFFFFFFFFFFFF on 64-bit platforms), this is an
 		  indication to U-Boot that all addresses are legal
 		  for the Linux kernel, including addresses in flash
 		  memory. In this case U-Boot will NOT COPY the
