@@ -270,9 +270,9 @@
 	"disk=0\0" \
 	"part=1\0" \
 	\
-	"fdt_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
 	"fdt_addr=0x18000000\0" \
-	"initrd_high=0xffffffff\0" \
+	"initrd_high=no_reloc\0" \
 	"fixfdt=" \
 		"fdt addr ${fdt_addr}\0" \
 	"bootdir=boot\0" \

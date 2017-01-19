@@ -222,7 +222,7 @@ unsigned long long get_qixis_addr(void);
 	"ramdisk_addr=0x800000\0"		\
 	"ramdisk_size=0x2000000\0"		\
 	"fdt_high=0xa0000000\0"			\
-	"initrd_high=0xffffffffffffffff\0"	\
+	"initrd_high=no_reloc\0"	\
 	"kernel_start=0x581200000\0"		\
 	"kernel_load=0xa0000000\0"		\
 	"kernel_size=0x2800000\0"		\

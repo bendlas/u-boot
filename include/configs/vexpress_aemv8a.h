@@ -174,8 +174,8 @@
 				"fdtfile=board.dtb\0" \
 				"fdt_alt_name=juno\0" \
 				"fdt_addr=0x83000000\0" \
-				"fdt_high=0xffffffffffffffff\0" \
-				"initrd_high=0xffffffffffffffff\0" \
+				"fdt_high=no_reloc\0" \
+				"initrd_high=no_reloc\0" \
 
 /* Assume we boot with root on the first partition of a USB stick */
 #define CONFIG_BOOTARGS		"console=ttyAMA0,115200n8 " \
@@ -216,8 +216,8 @@
 				"initrd_addr=0x88000000\0"	\
 				"fdtfile=devtree.dtb\0"		\
 				"fdt_addr=0x83000000\0"		\
-				"fdt_high=0xffffffffffffffff\0"	\
-				"initrd_high=0xffffffffffffffff\0"
+				"fdt_high=no_reloc\0"	\
+				"initrd_high=no_reloc\0"
 
 #define CONFIG_BOOTARGS		"console=ttyAMA0 earlyprintk=pl011,"\
 				"0x1c090000 debug user_debug=31 "\
@@ -237,8 +237,8 @@
 				"kernel_addr=0x80080000\0"	\
 				"initrd_addr=0x84000000\0"	\
 				"fdt_addr=0x83000000\0"		\
-				"fdt_high=0xffffffffffffffff\0"	\
-				"initrd_high=0xffffffffffffffff\0"
+				"fdt_high=no_reloc\0"	\
+				"initrd_high=no_reloc\0"
 
 #define CONFIG_BOOTARGS		"console=ttyAMA0 earlyprintk=pl011,"\
 				"0x1c090000 debug user_debug=31 "\

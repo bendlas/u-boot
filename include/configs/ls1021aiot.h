@@ -284,8 +284,8 @@
 
 #define CONFIG_EXTRA_ENV_SETTINGS	\
 	"bootargs=root=/dev/ram0 rw console=ttyS0,115200\0" \
-"initrd_high=0xffffffff\0"	\
-"fdt_high=0xffffffff\0"
+"initrd_high=no_reloc\0"	\
+"fdt_high=no_reloc\0"
 
 /*
  * Miscellaneous configurable options

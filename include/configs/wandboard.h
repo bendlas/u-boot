@@ -93,8 +93,8 @@
 	"console=ttymxc0,115200\0" \
 	"splashpos=m,m\0" \
 	"fdtfile=undefined\0" \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"fdt_addr_r=0x18000000\0" \
 	"fdt_addr=0x18000000\0" \
 	"ip_dyn=yes\0" \

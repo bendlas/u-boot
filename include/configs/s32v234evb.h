@@ -137,8 +137,8 @@
 	"scriptaddr=" __stringify(CONFIG_LOADADDR) "\0" \
 	"console=ttyLF0,115200\0" \
 	"fdt_file=s32v234-evb.dtb\0" \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"fdt_addr_r=0xC2000000\0" \
 	"kernel_addr_r=0xC307FFC0\0" \
 	"ramdisk_addr_r=0xC4000000\0" \

@@ -107,8 +107,8 @@
 				"kernel_addr_r=0x00080000\0" \
 				"fdtfile=hi6220-hikey.dtb\0" \
 				"fdt_addr_r=0x02000000\0" \
-				"fdt_high=0xffffffffffffffff\0" \
-				"initrd_high=0xffffffffffffffff\0" \
+				"fdt_high=no_reloc\0" \
+				"initrd_high=no_reloc\0" \
 				BOOTENV
 
 /* Preserve environment on sd card */

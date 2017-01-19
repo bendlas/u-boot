@@ -122,8 +122,8 @@
 	"image=zImage\0" \
 	"console=ttymxc0\0" \
 	"splashpos=m,m\0" \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"fdt_file=" CONFIG_DEFAULT_FDT_FILE "\0" \
 	"fdt_addr=0x82000000\0" \
 	"boot_fdt=try\0" \

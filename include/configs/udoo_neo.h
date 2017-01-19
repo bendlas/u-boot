@@ -32,8 +32,8 @@
 /* Linux only */
 #define CONFIG_ENV_VARS_UBOOT_RUNTIME_CONFIG
 #define CONFIG_EXTRA_ENV_SETTINGS \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"fdtfile=undefined\0" \
 	"fdt_addr=0x83000000\0" \
 	"ip_dyn=yes\0" \

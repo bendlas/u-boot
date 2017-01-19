@@ -296,8 +296,8 @@
 	"fdt_file=" CONFIG_DEFAULT_FDT_FILE "\0"                               \
 	"fdt_addr="__stringify(TQMA6_FDT_ADDRESS)"\0"                          \
 	"console=" CONSOLE_DEV "\0"                                     \
-	"fdt_high=0xffffffff\0"                                                \
-	"initrd_high=0xffffffff\0"                                             \
+	"fdt_high=no_reloc\0"                                                \
+	"initrd_high=no_reloc\0"                                             \
 	"addtty=setenv bootargs ${bootargs} console=${console},${baudrate}\0"  \
 	"addfb=setenv bootargs ${bootargs} "                                   \
 		"imx-fbdev.legacyfb_depth=32 consoleblank=0\0"                 \

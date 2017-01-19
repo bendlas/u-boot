@@ -74,7 +74,7 @@
 	"chp_size="__stringify(EL6Q_COHERENT_POOL_SIZE)"\0"                     \
 	"console=" CONSOLE_DEV "\0"					\
 	"fdtfile=undefined\0" \
-	"fdt_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
 	"fdt_addr_r=0x18000000\0" \
 	"fdt_addr=0x18000000\0" \
 	"findfdt=setenv fdtfile " CONFIG_DEFAULT_FDT_FILE "\0"                  \

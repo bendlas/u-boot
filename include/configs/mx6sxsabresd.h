@@ -50,8 +50,8 @@
 	"script=boot.scr\0" \
 	"image=zImage\0" \
 	"console=ttymxc0\0" \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"fdt_file=imx6sx-sdb.dtb\0" \
 	"fdt_addr=0x88000000\0" \
 	"boot_fdt=try\0" \

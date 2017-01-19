@@ -58,8 +58,8 @@
 	"panel=lb07wv8\0" \
 	"splashpos=m,m\0" \
 	"console=" CONSOLE_DEV "\0" \
-	"fdt_high=0xffffffff\0"	  \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0"	  \
+	"initrd_high=no_reloc\0" \
 	"addmtd=setenv bootargs ${bootargs} ${mtdparts}\0" \
 	"set_fit_default=fdt addr ${fit_addr_r};fdt set /configurations " \
 		"default ${board_type}\0" \

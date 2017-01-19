@@ -77,8 +77,8 @@
 #define CONFIG_ENV_SIZE_REDUND	(CONFIG_ENV_SIZE)
 
 #define CONFIG_EXTRA_ENV_SETTINGS	\
-	"fdt_high=0xffffffffffffffff\0"	\
-	"initrd_high=0xffffffffffffffff\0"
+	"fdt_high=no_reloc\0"	\
+	"initrd_high=no_reloc\0"
 
 #define CONFIG_BOOTARGS	\
 	"console=ttySC0,115200 rw root=/dev/nfs "	\

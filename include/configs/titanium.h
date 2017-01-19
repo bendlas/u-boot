@@ -83,8 +83,8 @@
 	"uimage=uImage\0" \
 	"console=ttymxc0\0" \
 	"baudrate=115200\0" \
-	"fdt_high=0xffffffff\0"	  \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0"	  \
+	"initrd_high=no_reloc\0" \
 	"mmcdev=0\0" \
 	"mmcpart=1\0" \
 	"uimage=uImage\0" \

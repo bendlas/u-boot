@@ -25,8 +25,8 @@
        "verify=no\0"                           \
        "loadaddr=0x80100000\0"                 \
        "kernel_addr=0x100000\0"                \
-       "fdt_high=0xffffffffffffffff\0"         \
-       "initrd_high=0xffffffffffffffff\0"      \
+       "fdt_high=no_reloc\0"         \
+       "initrd_high=no_reloc\0"      \
        "kernel_start=0xa00000\0"               \
        "kernel_load=0x96000000\0"              \
        "kernel_size=0x2800000\0"

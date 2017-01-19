@@ -87,7 +87,7 @@
 		"clk_ignore_unused "\
 		"\0" \
 	"initrd_addr=0x83800000\0" \
-	"initrd_high=0xffffffff\0" \
+	"initrd_high=no_reloc\0" \
 	"bootcmd_mfg=run mfgtool_args;bootz ${loadaddr} ${initrd_addr} ${fdt_addr};\0" \
 
 #define CONFIG_DFU_ENV_SETTINGS \
@@ -103,8 +103,8 @@
 	"script=boot.scr\0" \
 	"image=zImage\0" \
 	"console=ttymxc0\0" \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"fdt_file=imx7d-sdb.dtb\0" \
 	"fdt_addr=0x83000000\0" \
 	"boot_fdt=try\0" \

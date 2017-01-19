@@ -170,8 +170,8 @@
 /* Extra U-Boot environment. */
 #ifndef CONFIG_SPL_BUILD
 #define CONFIG_EXTRA_ENV_SETTINGS					\
-	"fdt_high=0xffffffff\0"						\
-	"initrd_high=0xffffffff\0"					\
+	"fdt_high=no_reloc\0"						\
+	"initrd_high=no_reloc\0"					\
 	"consdev=ttymxc1\0"						\
 	"baudrate=115200\0"						\
 	"bootdev=/dev/mmcblk0p1\0"					\

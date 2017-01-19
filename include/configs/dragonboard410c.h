@@ -113,8 +113,8 @@ REFLASH(dragonboard/u-boot.img, 8)\
 #define CONFIG_EXTRA_ENV_SETTINGS \
 	"reflash="CONFIG_ENV_REFLASH"\0"\
 	"loadaddr=0x81000000\0" \
-	"fdt_high=0xffffffffffffffff\0" \
-	"initrd_high=0xffffffffffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"linux_image=Image\0" \
 	"kernel_addr_r=0x81000000\0"\
 	"fdtfile=apq8016-sbc.dtb\0" \

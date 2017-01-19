@@ -35,8 +35,8 @@
 	"console=ttymxc3\0" \
 	"fdt_file=imx6q-arm2.dtb\0" \
 	"fdt_addr=0x18000000\0" \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"boot_fdt=try\0" \
 	"ip_dyn=yes\0" \
 	"mmcdev=1\0" \

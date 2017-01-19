@@ -139,8 +139,8 @@
 #define CONFIG_EXTRA_ENV_SETTINGS \
 	PCM052_EXTRA_ENV_SETTINGS \
 	"autoload=no\0" \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"blimg_file=u-boot.vyb\0" \
 	"blimg_addr=0x81000000\0" \
 	"kernel_file=zImage\0" \

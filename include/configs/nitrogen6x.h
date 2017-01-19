@@ -131,8 +131,8 @@
 	"script=boot.scr\0" \
 	"uimage=uImage\0" \
 	"console=ttymxc1\0" \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"fdt_file=imx6q-sabrelite.dtb\0" \
 	"fdt_addr=0x18000000\0" \
 	"boot_fdt=try\0" \
@@ -247,7 +247,7 @@
 		"setenv stdout serial,vga; " \
 		"echo no block devices found;" \
 		"\0" \
-	"initrd_high=0xffffffff\0" \
+	"initrd_high=no_reloc\0" \
 	"upgradeu=for dtype in ${bootdevs}" \
 		"; do " \
 		"for disk in 0 1 ; do ${dtype} dev ${disk} ;" \

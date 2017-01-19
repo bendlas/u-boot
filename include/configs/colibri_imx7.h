@@ -66,8 +66,8 @@
 
 #define MEM_LAYOUT_ENV_SETTINGS \
 	"fdt_addr_r=0x82000000\0" \
-	"fdt_high=0xffffffff\0" \
-	"initrd_high=0xffffffff\0" \
+	"fdt_high=no_reloc\0" \
+	"initrd_high=no_reloc\0" \
 	"kernel_addr_r=0x81000000\0" \
 	"ramdisk_addr_r=0x82100000\0"
 

@@ -81,8 +81,8 @@ DEFAULT_LINUX_BOOT_ENV \
 "loadaddr=0x82000000\0" \
 "fdtaddr=0x88000000\0" \
 "rdaddr=0x88080000\0" \
-"initrd_high=0xffffffff\0" \
-"fdt_high=0xffffffff\0" \
+"initrd_high=no_reloc\0" \
+"fdt_high=no_reloc\0" \
 "partitions=" \
 	"uuid_disk=${uuid_gpt_disk};" \
 	"name=rootfs,start=2MiB,size=-,uuid=${uuid_gpt_rootfs}\0" \
