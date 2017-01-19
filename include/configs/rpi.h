@@ -167,7 +167,7 @@
 	"pxefile_addr_r=0x00100000\0" \
 	"kernel_addr_r=0x01000000\0" \
 	"scriptaddr=0x02000000\0" \
-	"ramdisk_addr_r=0x02100000\0" \
+	"ramdisk_addr_r=0x04100000\0" \
 
 #define BOOT_TARGET_DEVICES(func) \
 	func(MMC, mmc, 0) \
