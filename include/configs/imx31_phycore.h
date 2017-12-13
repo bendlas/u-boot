@@ -150,7 +150,6 @@
 #define CONFIG_MXC_GPIO
 
 #define CONFIG_HARD_SPI
-#define CONFIG_MXC_SPI
 
 #define CONFIG_S6E63D6
 

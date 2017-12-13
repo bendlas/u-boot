@@ -36,9 +36,6 @@
 
 #define CONFIG_MXC_UART
 
-/* SPI */
-#define CONFIG_MXC_SPI
-
 /* SPI Flash */
 
 #define TQMA6_SPI_FLASH_SECTOR_SIZE	SZ_64K
