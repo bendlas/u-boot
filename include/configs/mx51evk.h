@@ -38,12 +38,6 @@
 #define CONFIG_MXC_UART_BASE	UART1_BASE
 #define CONFIG_MXC_GPIO
 
-/*
- * SPI Configs
- * */
-
-#define CONFIG_MXC_SPI
-
 /* PMIC Controller */
 #define CONFIG_POWER
 #define CONFIG_POWER_SPI
