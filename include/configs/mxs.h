@@ -150,7 +150,6 @@
 /* SPI */
 #ifdef CONFIG_CMD_SPI
 #define CONFIG_HARD_SPI
-#define CONFIG_MXS_SPI
 #define CONFIG_SPI_HALF_DUPLEX
 #endif
 
