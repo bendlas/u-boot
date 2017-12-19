@@ -11,7 +11,6 @@
 
 #define CONFIG_EXYNOS5420
 /* A variant of Exynos5420 (Exynos5 Family) */
-#define CONFIG_EXYNOS5800
 
 #define CONFIG_EXYNOS5_DT
 

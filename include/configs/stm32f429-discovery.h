@@ -8,7 +8,6 @@
 #ifndef __CONFIG_H
 #define __CONFIG_H
 
-#define CONFIG_STM32F4DISCOVERY
 
 #define CONFIG_MISC_INIT_R
 
