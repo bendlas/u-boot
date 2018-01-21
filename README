@@ -2001,16 +2001,6 @@ The following options need to be configured:
 		SPI EEPROM, also an instance works with Crystal A/D and
 		D/As on the SACSng board)
 
-		CONFIG_SOFT_SPI
-
-		Enables a software (bit-bang) SPI driver rather than
-		using hardware support. This is a general purpose
-		driver that only requires three general I/O port pins
-		(two outputs, one input) to function. If this is
-		defined, the board configuration must define several
-		SPI configuration items (port pins to use, etc). For
-		an example, see include/configs/sacsng.h.
-
 		CONFIG_HARD_SPI
 
 		Enables a hardware SPI driver for general-purpose reads

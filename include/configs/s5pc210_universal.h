@@ -142,7 +142,6 @@
 /*
  * SPI Settings
  */
-#define CONFIG_SOFT_SPI
 
 #ifndef	__ASSEMBLY__
 void universal_spi_scl(int bit);
