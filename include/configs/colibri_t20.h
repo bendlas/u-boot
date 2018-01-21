@@ -28,8 +28,6 @@
 #define CONFIG_USB_EHCI_TEGRA
 #define CONFIG_USB_MAX_CONTROLLER_COUNT	3
 
-/* USB networking support */
-
 /* General networking support */
 #define CONFIG_IP_DEFRAG
 #define CONFIG_TFTP_BLOCKSIZE		1536
