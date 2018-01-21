@@ -11,9 +11,6 @@
 
 #include "tegra186-common.h"
 
-/* High-level configuration options */
-#define CONFIG_TEGRA_BOARD_STRING	"NVIDIA P2771-0000"
-
 /* I2C */
 #define CONFIG_SYS_I2C_TEGRA
 
