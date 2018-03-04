@@ -353,9 +353,9 @@ CHECK		= sparse
 
 PYTHON		?= python
 ifeq ($(PYTHONPATH),)
-PYTHONPATH := tools
+PYTHONPATH := scripts/dtc/pylibfdt
 else
-PYTHONPATH := $(PYTHONPATH):tools
+PYTHONPATH := $(PYTHONPATH):scripts/dtc/pylibfdt
 endif
 
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
